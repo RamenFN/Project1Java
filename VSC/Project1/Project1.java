@@ -89,13 +89,34 @@ public class Project1 {
 		}
  	}
 	
-	public static void DisplayFreqNames(String[] names) {
-		// Method to display the most frequent name
-	}
+	 public static void DisplayFreqNames(String[] names) {
+        int maxCount = 0;
+        String mostFrequent = names[0];
+        for (int i = 0; i < names.length; i++) {
+            int count = 0;
+            for (int j = 0; j < names.length; j++) {
+                if (names[i].equalsIgnoreCase(names[j])) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mostFrequent = names[i];
+            }
+        }
+        System.out.println("Most Frequent Name: " + mostFrequent);
+    }
 	
 	public static void NewNameLists() {
-		// Method to enter a new list of names
-	}
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Enter new list of names (comma-separated):");
+        String input = scnr.nextLine();
+        String[] namesList = input.split(",");
+        for (int i = 0; i < namesList.length; i++) {
+            namesList[i] = namesList[i].trim();
+        }
+        System.out.println("New list of names entered: " + Arrays.toString(namesList));
+    }
 	
 	
 	public static void main(String[] args) {
