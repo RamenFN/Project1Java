@@ -1,11 +1,20 @@
 import java.util.Scanner;
 
 public class Project1 {
-
+	
+	public static void DisplayListOrdered() {
+		
+	}
+	
+	public static void DisplayFullNames() {
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scnr = new Scanner(System.in);
 		int userChoice;
+		
 		String[] NamesList; // LEFT OF ON CREATING THE LIST OF STUDENTS (MAYBE MAKE IT A METHOD)
 		
 		while (true) {
